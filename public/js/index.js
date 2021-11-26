@@ -189,16 +189,16 @@ function f1() {
 let pausedGame = () => {
   clearInterval(start);
   document.querySelectorAll(".word").forEach((bubble) => {
-    if (bubble.style.webkitAnimationPlayState === "paused") {
-      bubble.style.webkitAnimationPlayState = "running";
+    if (bubble.style.animationPlayState === "paused") {
+      bubble.style.animationPlayState = "running";
       f1();
       startStatus = true;
       music.muted = false;
     } else if (
-      bubble.style.webkitAnimationPlayState === "running" ||
-      bubble.style.webkitAnimationPlayState === ""
+      bubble.style.animationPlayState === "running" ||
+      bubble.style.animationPlayState === ""
     ) {
-      bubble.style.webkitAnimationPlayState = "paused"; // assuming you want to toggle
+      bubble.style.animationPlayState = "paused"; // assuming you want to toggle
       startStatus = false;
       music.muted = true;
     }
@@ -441,22 +441,27 @@ function gamePlay() {
 }
 
 //Blur tab on browser
-document.addEventListener("visibilitychange", function () {
-  if (document.hidden) {
-    console.log("hidden");
-    clearInterval(start);
-    document.querySelectorAll(".word").forEach((bubble) => {
-      bubble.style.webkitAnimationPlayState = "paused"; // assuming you want to toggle
+document.addEventListener(
+  "visibilitychange",
+  function () {
+    if (document.visibilityState === "hidden") {
+      clearInterval(start);
       startStatus = false;
       music.muted = true;
-    });
-  } else {
-    console.log("visible");
-    document.querySelectorAll(".word").forEach((bubble) => {
-      bubble.style.webkitAnimationPlayState = "running";
+      let bubbleList = document.querySelectorAll(".word");
+      bubbleList.forEach((bubble) => {
+          bubble.style.animationPlayState = "paused";
+      });
+
+    } else {
       f1();
       startStatus = true;
       music.muted = false;
-    });
-  }
-});
+      let bubbleList = document.querySelectorAll(".word");
+      bubbleList.forEach((bubble) => {
+          bubble.style.animationPlayState = "running";
+      });
+    }
+  },
+  true
+);
