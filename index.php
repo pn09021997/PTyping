@@ -208,7 +208,7 @@ if (isset($_SESSION['username']) == false && isset($_SESSION['password']) == fal
           <i class="fas fa-fighter-jet" id="support-supper"></i>
         </button>
         <div class="progress progress--custom">
-          <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="specialSupport"  style="width: 97%" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="specialSupport"  style="width: 5%" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </div>
     </div>

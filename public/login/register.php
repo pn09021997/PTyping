@@ -45,6 +45,7 @@ if (isset($_POST["username"]) == TRUE && isset($_POST["password"]) == TRUE && is
                 position: absolute;
                 margin-top: -313px;">You have successfully signed up!<br>Please login now!</div>';
         }
+        header("Location:./login.php#content");
     }
 }
 ?>

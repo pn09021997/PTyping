@@ -53,7 +53,7 @@ if (isset($_POST["username"]) == TRUE) {
     <div class='introduce__bg-img'></div>
     <div class='introduce__content'>
       <div class='introduce__content-body'>
-        INTRODUCE: <span class="play-game"> Xin chào mọi người, dưới đây là một tựa game giành cho những bạn có sở thích học tiếng nhật và nâng cao trình độ của mình qua những chữ cái tiếng Nhật.
+          <span class="play-game"> Xin chào mọi người, dưới đây là một tựa game giành cho những bạn có sở thích học tiếng nhật và nâng cao trình độ của mình qua những chữ cái tiếng Nhật.
           Game dựa trên bảng chữ cái giúp người dùng dễ dàng ghi nhớ chúng hơn. Người chơi sẽ gõ các ký tự latin hoặc chữ số tương ứng trên bàn phím. Nếu gõ
           đúng, bong bóng sẽ bể và người chơi được +1 điểm. Nếu người chơi để 1 bong bóng chạm sàn thì trò chơi kết thúc.Trong các bong bóng, thỉnh thoảng sẽ có bong bóng đính kèm ngôi sao, nếu gõ
           đúng bong bóng có sao thì được +2 điểm Thỉnh thoảng sẽ xuất hiện các bong bóng màu đen. Người chơi không được gõ bong bóng đen mà phải để nó chạm sàn rồi biến mất. Nếu gõ trúng bong bóng đen thì
