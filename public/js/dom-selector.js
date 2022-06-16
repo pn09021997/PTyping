@@ -1,7 +1,7 @@
 let arrJPWord = new Map();
 arrJPWord
   .set("a", "あ");
-  /*.set("i", "い")
+  .set("i", "い")
   .set("u", "う")
   .set("e", "え")
   .set("o", "お")
@@ -54,7 +54,7 @@ arrJPWord
   .set("6", "六")
   .set("7", "七")
   .set("8", "八")
-  .set("9", "九")*/
+  .set("9", "九");
 
 let startStatus = false;
 let level = 5000;
